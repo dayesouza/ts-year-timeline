@@ -1,8 +1,17 @@
 {
   "name": "ts-year-timeline",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "private": false,
   "license": "MIT",
+  "description": "description",
+  "author": {
+    "name": "Dayenne Souza",
+    "email": "day.carol18@gmail.com"
+  },
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/dayesouza/ts-year-timeline"
+  },
   "dependencies": {
     "@babel/cli": "^7.16.0",
     "@babel/preset-react": "^7.16.0",
@@ -25,9 +34,8 @@
     "start": "react-scripts start",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "clean": "rm -rf dist",
     "publish:npm": "npm run build && npm publish ./dist",
-    "build": "npm run clean && tsc && cp package.json README.md ./dist"
+    "build": "tsc && cp package.json README.md ./dist"
   },
   "eslintConfig": {
     "extends": [
