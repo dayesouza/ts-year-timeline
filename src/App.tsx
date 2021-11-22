@@ -1,24 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Tab } from "./components/Tab";
+import { Tabs } from "./components/Tabs";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Tabs>
+        <Tab year={1987}>
+          See yaasdasdasd later, <em>Alligator</em>
+        </Tab>
+        <Tab year={1995}>
+          See ya later, <em>Cat</em>
+        </Tab>
+        <Tab year={2021}>
+          After 'while, <em>Crocodile</em>
+        </Tab>
+        <Tab year={2000}>
+          Nothing to see here, this tab is <em>extinct</em>!
+        </Tab>
+      </Tabs>
     </div>
   );
 }
