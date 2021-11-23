@@ -1,6 +1,6 @@
 {
   "name": "ts-year-timeline",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "private": false,
   "license": "MIT",
   "description": "description",
@@ -9,8 +9,8 @@
     "email": "day.carol18@gmail.com"
   },
   "repository": {
-      "type": "git",
-      "url": "https://github.com/dayesouza/ts-year-timeline"
+    "type": "git",
+    "url": "https://github.com/dayesouza/ts-year-timeline"
   },
   "dependencies": {
     "@babel/cli": "^7.16.0",
@@ -23,6 +23,7 @@
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "@types/styled-components": "^5.1.15",
+    "bootstrap-icons": "^1.7.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
@@ -35,12 +36,24 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "publish:npm": "npm run build && npm publish ./dist",
-    "build": "tsc && cp package.json README.md ./dist"
+    "build": "tsc && cp package.json README.md ./dist",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "**/*.stories.*"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      }
     ]
   },
   "browserslist": {
@@ -54,5 +67,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^6.3.12",
+    "@storybook/addon-essentials": "^6.3.12",
+    "@storybook/addon-links": "^6.3.12",
+    "@storybook/node-logger": "^6.3.12",
+    "@storybook/preset-create-react-app": "^3.2.0",
+    "@storybook/react": "^6.3.12"
   }
 }

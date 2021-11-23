@@ -36,7 +36,7 @@ const Item = styled.li<{
   secondaryColor: string;
 }>`
   display: inline-block;
-  margin-right: 5em;
+  margin-right: 15em;
   position: relative;
   cursor: pointer;
   background-color: ${({ isActive, primaryColor, secondaryColor }) =>
@@ -56,15 +56,20 @@ const Item = styled.li<{
   &:before,
   &:after {
     content: "";
-    width: 5em;
+    width: 15em;
     border-bottom: 1px solid;
     position: absolute;
     top: 50%;
+    color: ${({ secondaryColor }) => secondaryColor};
   }
 
   &:first-of-type:before,
   &:last-of-type:after {
     display: none;
+  }
+
+  &:last-of-type {
+    margin-right: unset;
   }
 `;
 const Label = styled.div`
