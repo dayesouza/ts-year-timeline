@@ -12,6 +12,7 @@
     "type": "git",
     "url": "https://github.com/dayesouza/ts-year-timeline"
   },
+  "homepage": "https://dayesouza.github.io/ts-year-timeline",
   "dependencies": {
     "@babel/cli": "^7.16.0",
     "@babel/preset-react": "^7.16.0",
