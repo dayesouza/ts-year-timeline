@@ -38,7 +38,7 @@
     "publish:npm": "npm run build && npm publish ./dist",
     "build": "tsc && cp package.json README.md ./dist",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -o docs-build"
   },
   "eslintConfig": {
     "extends": [
